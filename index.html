@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <script>
+         var module = {}
+      </script>
+      <script type="text/javascript" src="js\isItFriday.js"></script>  
+      <h1 id="content"></h1>
+      <script>
+         if (isItFriday(new Date())) {
+         	document.getElementById('content').innerHTML = "It is Friday."
+         } else {
+         	document.getElementById('content').innerHTML = "It is not Friday."
+         }
+      </script>
+   </body>
+</html>

@@ -41,4 +41,17 @@ jobs:
       - name: Unit tests
         run: |
          npm test
+      - name: Make dist folder
+        run: |
+         mkdir dist
+      - name: Copy index.html into dist folder
+        run: |
+         cp index.html dist
+      - name: Copy js into dist folder
+        run: |
+         cp -r js dist/js
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
       - run: echo "This job's status is ${{ job.status }}."

@@ -50,7 +50,7 @@ jobs:
       - name: Copy js into dist folder
         run: |
          cp -r js dist/js
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: dist
           path: dist

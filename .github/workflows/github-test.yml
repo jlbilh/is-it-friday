@@ -50,11 +50,8 @@ jobs:
       - name: Copy js into dist folder
         run: |
          cp -r js dist/js
-      - uses: montudor/action-zip@v1
-        with:
-          args: zip -qq -r dist.zip dist
       - uses: actions/upload-artifact@v2
         with:
           name: dist.zip
-          path: dist.zip
+          path: dist
       - run: echo "This job's status is ${{ job.status }}."

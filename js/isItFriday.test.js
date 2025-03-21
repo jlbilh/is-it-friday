@@ -25,3 +25,13 @@ test('Easter is not Friday', () => {
     var thisEaster = easterDate(thisYear);
     expect(isItFriday(thisEaster)).toBe(false);
 })
+
+test('Easter is never Friday', () => {
+	let minYear = 1600;
+	let maxYear = 9999;
+	for (let i = 0; i < 100; i++) {
+		var randomYear = Math.floor(Math.random() * (maxYear - minYear) + minYear);
+		var randomEaster = easterDate(randomYear);
+		expect(isItFriday(randomEaster)).toBe(false);
+	} 
+})
